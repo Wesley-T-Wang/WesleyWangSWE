@@ -7,32 +7,25 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core-module/core.module';
 import { SharedModule } from './shared-module/shared.module';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent, SignUpComponent } from './components';
-import { RoomSelectionComponent } from './components/room-selection/room-selection.component';
-import { RoomComponent } from './components/room/room.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { LoginService } from './services';
-import { AuthGuard } from './auth.guard';
-import { PostComponent } from './components/post/post.component';
-import { ModalComponent } from './components/modal/modal.component';
-import { CreationComponent } from './components/creation/creation.component';
-import { RoomModuleComponent } from './components/room-module/room-module.component';
-import { UpdateRoomComponent } from './components/update-room/update-room.component';
-import { SafeHTMLPipe } from './pipes/safe-html.pipe';
+import { HomeComponent } from './components/home/home.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { WorkComponent } from './components/work/work.component';
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    SignUpComponent,
-    RoomSelectionComponent,
-    RoomComponent,
-    PostComponent,
-    ModalComponent,
-    CreationComponent,
-    RoomModuleComponent,
-    UpdateRoomComponent,
-    SafeHTMLPipe
+    HomeComponent,
+    AboutMeComponent,
+    ContactComponent,
+    ProjectsComponent,
+    WorkComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
@@ -41,9 +34,10 @@ import { SafeHTMLPipe } from './pipes/safe-html.pipe';
     BrowserAnimationsModule,
     SharedModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    AngularFullpageModule
   ],
-  providers: [LoginService, AuthGuard],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

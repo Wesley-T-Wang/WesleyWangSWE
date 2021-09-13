@@ -1,0 +1,140 @@
+<div class="fullscreenDiv">
+  <!-- Main navigation -->
+  <header>
+    <!--Navbar-->
+    <mdb-navbar
+      SideClass="navbar navbar-expand-lg navbar-dark scrolling-navbar fixed-top transparent z-depth-0"
+      [containerInside]="false"
+    >
+      <mdb-navbar-brand>
+      <a class="navbar-brand" href="#">
+        <img src="https://ucsdtritons.com/images/logos/site/site.png" height="50" alt="">
+      </a>
+    </mdb-navbar-brand>
+
+      <!-- Collapsible content -->
+      <links style="margin-right:10px">
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" (click)="
+                  goToLink(
+                    'https://www.linkedin.com/in/wesleytwang/'
+                  )
+                ">
+              <mdb-icon fab icon="linkedin-in"></mdb-icon>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="
+                  goToLink(
+                    'https://github.com/Wesley-T-Wang'
+                  )
+                ">
+              <mdb-icon fab icon="github"></mdb-icon>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="
+                  goToLink(
+                    'https://devpost.com/Wesley-T-Wang?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav'
+                  )
+                ">
+              <mdb-icon fab icon="dev"></mdb-icon>
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown" dropdown>
+            <a
+              dropdownToggle
+              mdbWavesEffect
+              type="button"
+              class="nav-link dropdown-toggle waves-light"
+              mdbWavesEffect
+            >
+              <mdb-icon fas icon="download"></mdb-icon>
+              <span class="caret"></span
+            ></a>
+            <div
+              *dropdownMenu
+              class="
+                dropdown-menu dropdown dropdown-primary
+                dropdowm-menu-right
+              "
+              role="menu"
+            >
+              <a
+                class="dropdown-item waves-light"
+                (click)="
+                  goToLink(
+                    'https://drive.google.com/file/d/1PDCV7auZQ0GTZ9uvzS6WMoWpFMufuv1q/view?usp=sharing'
+                  )
+                "
+                mdbWavesEffect
+                href="#"
+                >Resume</a
+              >
+              <!-- <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                >Another action</a
+              >
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                >Something else here</a
+              >
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item waves-light" mdbWavesEffect href="#"
+                >Separated link</a
+              > -->
+            </div>
+          </li>
+        </ul>
+        <!-- Links -->
+      </links>
+      <!-- Collapsible content -->
+    </mdb-navbar>
+    <!--/.Navbar-->
+
+    <!-- Intro -->
+    <section class="view">
+      <div class="row">
+        <div class="col-md-6">
+          <div
+            style="margin-top: 300px"
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <h1
+              class="heading display-3 wow bounce"
+              data-wow-delay="0.7s"
+              data-wow-iteration="2"
+            >
+              Hello, I'm Wesley
+            </h1>
+            <!-- <h1 class="heading display-3">Wesley Wang</h1> -->
+            <h4 class="subheading font-weight-bold">
+              Software Engineer at UCSD
+            </h4>
+            <!-- <div class="mr-auto">
+            <button type="button" mdbBtn color="lily" rounded="true" class="btn-margin">Get started <i
+              class="fas fa-caret-right ml-3"></i></button>
+          </div> -->
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="view fullscreenDiv">
+            <img
+              src="https://cdn.discordapp.com/attachments/705234290991956045/886344724666011668/IMG_0359.jpg"
+              class="img-fluid"
+              alt="smaple image"
+            />
+            <div class="mask flex-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Intro -->
+  </header>
+  <!-- Main navigation -->
+
+  <!-- <div style="height: 150vh"></div> -->
+</div>

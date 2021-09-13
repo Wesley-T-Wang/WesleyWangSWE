@@ -1,129 +1,38 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12 mb-3 mt-lg-5 mt-3">
-      <p-toast
-        [style]="{ marginTop: '10px' }"
-        position="top-center"
-        baseZIndex="1021"
-      ></p-toast>
-
-      <!-- Navbar -->
-      <nav
-        *ngIf="showNavbar"
-        class="navbar navbar-expand-lg bg-dark navbar-dark"
-      >
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand" [routerLink]="['/roomselection']"
-            ><i class="fas fa-home"></i
-          ></a>
-
-          <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- Link -->
-              <div *ngIf="showSettings">
-                <app-update-room [currentRoom]="currentRoom"></app-update-room>
-              </div>
-            </ul>
-          </div>
-          <!-- Icons -->
-          <ul class="navbar-nav d-flex flex-row me-1">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    data-toggle="modal"
-                    (click)="frame.show()"
-                    data-target="#basicExample"
-                    mdbWavesEffect
-                    >Join Room</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">{{ userFromStorage }}</a>
-                </li>
-              </ul>
-            </div>
-            <li class="nav-item me-3 me-lg-0">
-              <a class="nav-link" (click)="logout()" [routerLink]="['/login']"
-                ><i class="fas fa-sign-out-alt"></i
-              ></a>
-            </li>
-          </ul>
-          <!-- Search -->
-        </div>
-        <!-- Container wrapper -->
-      </nav>
-      <!-- Navbar -->
-
-      <router-outlet></router-outlet>
-    </div>
+<!-- <app-home></app-home>
+<body class="black-skin" style="margin:5%">
+  <div class="fullscreenDiv">
+    <app-education></app-education>
+  </div >
+  <div class="fullscreenDiv">
+    <app-work></app-work>
   </div>
-
-  <div
-    mdbModal
-    #frame="mdbModal"
-    class="modal fade left"
-    id="frameModalTop"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="myModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header text-center">
-          <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-            (click)="frame.hide(); roomNameInput = ''; passwordInput = ''"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body mx-3">
-          <div class="md-form mb-5">
-            <mdb-icon fas icon="chart-line" class="prefix grey-text"></mdb-icon>
-            <input
-              [(ngModel)]="roomNameInput"
-              type="email"
-              id="defaultForm-email"
-              class="form-control"
-              mdbInput
-            />
-            <label for="defaultForm-email">Room Name</label>
-          </div>
-
-          <div class="md-form mb-4">
-            <mdb-icon fas icon="lock" class="prefix grey-text"></mdb-icon>
-            <input
-              [(ngModel)]="passwordInput"
-              type="password"
-              id="defaultForm-pass"
-              class="form-control"
-              mdbInput
-            />
-            <label for="defaultForm-pass">Password</label>
-          </div>
-        </div>
-        <div class="modal-footer d-flex justify-content-center">
-          <button
-            mdbBtn
-            gradient="peach"
-            (click)="loginToRoom(roomNameInput, passwordInput); frame.hide()"
-            class="waves-light"
-            mdbWavesEffect
-          >
-            Login
-          </button>
-        </div>
-      </div>
-    </div>
+  <div class="fullscreenDiv">
+    <app-projects></app-projects>
   </div>
+  <div class="fullscreenDiv">
+    <app-about-me></app-about-me>
+  </div>
+  <div class="fullscreenDiv">
+    <app-contact></app-contact>
+  </div>
+</body> -->
+
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+  <div class="section"><app-home></app-home></div>
+  <div style="padding-left:2.5%; padding-right:2.5%" class="section"><app-education></app-education></div>
+  <div style="padding-left:2.5%; padding-right:2.5%" class="section"><app-work></app-work></div>
+  <div style="padding-left:2.5%; padding-right:2.5%" class="section"><app-projects></app-projects></div>
+  <div style="padding-left:2.5%; padding-right:2.5%" class="section" ><app-about-me [isAlive]="aboutMeInView"></app-about-me></div>
+  <div style="padding-left:2.5%; padding-right:2.5%" class="section"><app-contact></app-contact></div>
 </div>
+
+
+
+
+      <!-- <div class="section" (click)="fullpage_api.moveSectionDown()">Some section2</div>
+    <div class="section">
+      <div class="slide">Slide 2.1</div>
+      <div class="slide">Slide 2.2</div>
+      <div class="slide">Slide 2.3</div>
+    </div>
+    <div class="section" (click)="fullpage_api.moveTo('secondPage', 2)">Some section4</div> -->

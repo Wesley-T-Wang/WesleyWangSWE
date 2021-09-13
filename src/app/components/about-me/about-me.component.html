@@ -1,0 +1,369 @@
+
+<div class="fullscreenDiv" *ngIf="isAlive">
+
+
+<!--Section: Features v.4-->
+<section>
+  <!--Section heading-->
+  <h2 class="h1 py-5 font-weight-bold text-center">More About Me</h2>
+  <!--Section description-->
+  <!-- <p class="px-5 mb-5 pb-3 lead grey-text text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam.</p> -->
+
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-md-4">
+      <!--Grid row-->
+
+      <a (click)="selectVolleyball()">
+        <mdb-card
+          style="margin-bottom: 25px"
+          [ngClass]="{ activeHobby: volleyball }"
+        >
+          <mdb-card-body style="margin-bottom: -5px">
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon
+                  fas
+                  icon="volleyball-ball"
+                  size="2x"
+                  class="deep-purple-text"
+                ></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Volleyball</h5>
+                <p class="grey-text" style="margin-right: 20px">
+                  I play volleyball on the men's club team at UCSD and primarily
+                  play setter. In high school I won the CIF Open Division
+                  Championship indoors and was the third ranked beach doubles
+                  Team in San Diego.
+                </p>
+              </div>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+      </a>
+
+      <!--Grid row-->
+      <a (click)="selectCats()">
+        <mdb-card
+          style="margin-top: 25px; margin-bottom: 25px"
+          [ngClass]="{ activeHobby: cats }"
+        >
+          <mdb-card-body style="margin-bottom: -5px">
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon
+                  fas
+                  icon="paw"
+                  size="2x"
+                  class="deep-purple-text"
+                ></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Cats</h5>
+                <p class="grey-text" style="margin-right: 20px">
+                  I adopted two kittens Snowy and Oreo. Snowy is a girl and Oreo
+                  is a boy, they are both siblings and 5 months old now. They
+                  look almost the same but snowy is slightly lighter colored and
+                  Oreo is a little bit larger.
+                </p>
+              </div>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+      </a>
+
+      <!--Grid row-->
+      <a (click)="selectKeyboards()">
+        <mdb-card
+          style="margin-top: 25px"
+          [ngClass]="{ activeHobby: keyboards }"
+        >
+          <mdb-card-body style="margin-bottom: -5px">
+            <div class="row mb-2">
+              <div class="col-2">
+                <mdb-icon
+                  fas
+                  icon="keyboard"
+                  size="2x"
+                  class="deep-purple-text"
+                ></mdb-icon>
+              </div>
+              <div class="col-10 text-left">
+                <h5 class="font-weight-bold">Keyboards</h5>
+                <p class="grey-text" style="margin-right: 20px">
+                  I have built 2 custom keyboards. The first is the Boardsource
+                  Mark 65, a gasket mounted 65 percent keyboard with lubed 67g
+                  tangies in a frosted acrylic case. The second is a bluetooth
+                  bt60 pcb in a TOFU aluminum case with lubed gateron yellows
+                </p>
+              </div>
+            </div>
+          </mdb-card-body>
+        </mdb-card>
+      </a>
+      <!--Grid row-->
+    </div>
+    <!--Grid column-->
+
+    <div class="col-md-8 mb-2 center-on-small-only flex-center">
+      <div class="col-md-6" style="margin-top:-35px" *ngIf="volleyball; else catBlock">
+
+        <mdb-carousel
+
+          [isControls]="true"
+          class="carousel slide"
+          [animation]="'slide'"
+        >
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+              style="display:inline-block"
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886344724666011668/IMG_0359.jpg"
+                alt="Second slide"
+              />
+              <div
+                class="mask waves-light"
+                mdbWavesEffect
+              ></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">Hitting</h3>
+                <!-- <p>First text</p> -->
+              </div>
+            </div>
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+              style="display:inline-block"
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886366991441621053/image2.png"
+                alt="Second slide"
+              />
+              <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">Setting</h3>
+                <!-- <p>First text</p> -->
+              </div>
+            </div>
+          </mdb-carousel-item>
+
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+              style="display:inline-block"
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886366990451740752/image1.png"
+                alt="Second slide"
+              />
+              <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">One handed save</h3>
+                <!-- <p>First text</p> -->
+              </div>
+            </div>
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+              style="display:inline-block"
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886366989818404885/image0.png"
+                alt="Second slide"
+              />
+              <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">Blocking</h3>
+                <!-- <p>First text</p> -->
+              </div>
+            </div>
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+              style="display:inline-block"
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886367172442607656/image0.png"
+                alt="Second slide"
+              />
+              <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">Warm up swings</h3>
+                <!-- <p>First text</p> -->
+              </div>
+            </div>
+          </mdb-carousel-item>
+
+
+
+        </mdb-carousel>
+      </div>
+      <ng-template #catBlock>
+        <div *ngIf="cats; else keyboardBlock">
+          <mdb-carousel
+            [isControls]="true"
+            class="carousel slide"
+            [animation]="'slide'"
+          >
+            <mdb-carousel-item>
+              <div class="view">
+                <img
+                  class="d-block w-100"
+                  src="https://cdn.discordapp.com/attachments/705234290991956045/886396535527591967/IMG_8603.jpg"
+                  alt="Second slide"
+                />
+
+                <div class="mask waves-light" mdbWavesEffect></div>
+              </div>
+
+              <div class="carousel-caption">
+                <div class="animated fadeInDown delay-1s">
+                  <h3 class="h3-responsive">Snowy</h3>
+                  <!-- <p>Oreo in the back</p> -->
+                </div>
+              </div>
+            </mdb-carousel-item>
+
+            <mdb-carousel-item>
+              <div class="view">
+                <img
+                  class="d-block w-100"
+                  src="https://cdn.discordapp.com/attachments/705234290991956045/886398985483477012/IMG_8865.jpg"
+                  alt="Second slide"
+                />
+
+                <div class="mask waves-light" mdbWavesEffect></div>
+              </div>
+
+              <div class="carousel-caption">
+                <div class="animated fadeInDown delay-1s">
+                  <h3 class="h3-responsive">Oreo</h3>
+                  <!-- <p>First text</p> -->
+                </div>
+              </div>
+            </mdb-carousel-item>
+
+            <mdb-carousel-item>
+              <div class="view">
+                <img
+                  class="d-block w-100"
+                  src="https://cdn.discordapp.com/attachments/705234290991956045/886395809476792330/IMG_8525.jpg"
+                  alt="Second slide"
+                />
+
+                <div class="mask waves-light" mdbWavesEffect></div>
+              </div>
+
+              <div class="carousel-caption">
+                <div class="animated fadeInDown delay-1s">
+                  <h3 class="h3-responsive">Oreo and Snowy</h3>
+                  <!-- <p>First text</p> -->
+                </div>
+              </div>
+            </mdb-carousel-item>
+
+            <mdb-carousel-item>
+              <div class="view">
+                <img
+                  class="d-block w-100"
+                  src="https://cdn.discordapp.com/attachments/705234290991956045/886395305912836126/image1.jpg"
+                  alt="Second slide"
+                />
+
+                <div class="mask waves-light" mdbWavesEffect></div>
+              </div>
+
+              <div class="carousel-caption">
+                <div class="animated fadeInDown delay-1s">
+                  <h3 class="h3-responsive">Snowy and Oreo</h3>
+                  <!-- <p>First text</p> -->
+                </div>
+              </div>
+            </mdb-carousel-item>
+
+
+          </mdb-carousel>
+        </div>
+      </ng-template>
+      <ng-template #keyboardBlock>
+        <mdb-carousel
+          [isControls]="true"
+          class="carousel slide"
+          [animation]="'slide'"
+        >
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886321744799997952/image1.jpg"
+                alt="Second slide"
+              />
+              <!-- <video class="video-fluid" autoplay loop>
+              <source
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886044854449234000/cm-chat-media-video-1_9bd3a75a-9550-5d51-93e9-9554830f527c_689_0_0.MOV"
+                type="video/mp4"
+              />
+            </video> -->
+              <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">BoardSource Mark 65</h3>
+                <p>67g Tangies</p>
+              </div>
+            </div>
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <div class="view">
+              <img
+                class="d-block w-100"
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886321744426725376/image0.jpg"
+                alt="Second slide"
+              />
+              <!-- <video class="video-fluid" autoplay loop>
+              <source
+                src="https://cdn.discordapp.com/attachments/705234290991956045/886044854449234000/cm-chat-media-video-1_9bd3a75a-9550-5d51-93e9-9554830f527c_689_0_0.MOV"
+                type="video/mp4"
+              />
+            </video> -->
+              <div class="mask waves-light" mdbWavesEffect></div>
+            </div>
+
+            <div class="carousel-caption">
+              <div class="animated fadeInDown delay-1s">
+                <h3 class="h3-responsive">BT60</h3>
+                <p>Gateron Yellows</p>
+              </div>
+            </div>
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </ng-template>
+    </div>
+
+    <!--Grid column-->
+  </div>
+  <!--Grid row-->
+</section>
+<!--/Section: Features v.4-->
+</div>

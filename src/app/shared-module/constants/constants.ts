@@ -1,11 +1,9 @@
 export class Constants {
   static uiRoutes = {
-    login: 'login',
-    signup: 'signup',
-    room: 'roomselection',
-    board: 'room'
+    home: 'home',
   }
-  static session = {
-    user: 'user'
-  }
+
 }
+
+
+
